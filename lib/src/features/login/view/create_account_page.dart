@@ -255,7 +255,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                         buttonName: "CREATE ACCOUNT",
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 15,
                       ),
                       isSaved ? CircularProgressIndicator() : SizedBox(),
                     ],
