@@ -41,7 +41,6 @@ class _HomeDashBoardState extends State<HomeDashBoard> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Scaffold(
-  
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 25),
           child: Column(
