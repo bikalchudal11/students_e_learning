@@ -52,7 +52,7 @@ class MessageComponent extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 19,
+            width: 20,
           ),
           time
         ],
