@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:students_e_learning/firebase_options.dart';
 import 'package:students_e_learning/src/features/login/view/login_screen.dart';
 import 'package:students_e_learning/src/features/login/view/splash_screen.dart';
+import 'package:students_e_learning/src/features/select_subject/view/select_class.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: SplashScreen(),
+      home: SelectClass(),
     );
   }
 }
