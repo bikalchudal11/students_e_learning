@@ -6,6 +6,8 @@ import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/features/home/view/home_dashboard.dart';
 import 'package:students_e_learning/src/features/login/view/create_account_page.dart';
+import 'package:students_e_learning/src/features/select_subject/view/select_class.dart';
+import 'package:students_e_learning/src/features/select_subject/view/select_subject.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
@@ -42,8 +44,8 @@ class _LogInScreenState extends State<LogInScreen> {
 
         // ignore: unnecessary_null_comparison
         if (userCredential != null) {
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => HomeDashBoard()));
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => SelectClass()));
         }
       } on FirebaseAuthException catch (ex) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(

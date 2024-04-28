@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
+import 'package:students_e_learning/src/features/home/view/home_dashboard.dart';
 import 'package:students_e_learning/src/features/select_subject/view/select_subject.dart';
 
 class SelectClass extends StatefulWidget {
@@ -37,7 +38,14 @@ class _SelectClassState extends State<SelectClass> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
-                Text("Skip"),
+                InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomeDashBoard()));
+                    },
+                    child: Text("Skip")),
               ],
             ),
             SizedBox(
