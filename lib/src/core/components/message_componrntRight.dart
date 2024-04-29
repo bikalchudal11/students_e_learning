@@ -18,10 +18,9 @@ class MessageComponentRight extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(width: 10),
           time,
-          SizedBox(width: 70),
           Container(
             width: 200,
             decoration: BoxDecoration(

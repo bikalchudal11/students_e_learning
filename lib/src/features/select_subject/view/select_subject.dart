@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
-import 'package:students_e_learning/src/features/home/view/home_dashboard.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/home_dashboard.dart';
 
 class SelectSubject extends StatefulWidget {
   const SelectSubject({super.key});

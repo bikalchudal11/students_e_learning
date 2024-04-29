@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
-import 'package:students_e_learning/src/features/home/view/home_dashboard.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/home_dashboard.dart';
 import 'package:students_e_learning/src/features/login/view/create_account_page.dart';
 import 'package:students_e_learning/src/features/select_subject/view/select_class.dart';
 import 'package:students_e_learning/src/features/select_subject/view/select_subject.dart';

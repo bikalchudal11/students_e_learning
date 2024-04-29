@@ -3,8 +3,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/firebase_options.dart';
-import 'package:students_e_learning/src/features/chat/chat.dart';
-import 'package:students_e_learning/src/features/home/view/home_dashboard.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/chat/chat_page.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/home_dashboard.dart';
 import 'package:students_e_learning/src/features/login/view/login_screen.dart';
 import 'package:students_e_learning/src/features/login/view/splash_screen.dart';
 import 'package:students_e_learning/src/features/select_subject/view/select_class.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: ChatPage(),
+      home: HomeDashBoard(),
     );
   }
 }
