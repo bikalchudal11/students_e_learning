@@ -1,2 +1,2 @@
 String network_img_url =
-    'https://th.bing.com/th/id/OIP.y3pF2wy77QRfVCAjw5GCIAHaNK?w=117&h=209&c=7&r=0&o=5&pid=1.7';
+    'https://i.pinimg.com/236x/cf/0b/74/cf0b7475f26c043b55fe50cfb98c15d5.jpg';
