@@ -1,13 +1,17 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/core/constants/img_const.dart';
-import 'package:students_e_learning/src/features/bottom_navigation/home/model/class_model.dart';
 
 class ClassContainer extends StatelessWidget {
-  Class eachClass;
+  String eachClass;
+  String time;
+
   ClassContainer({
     super.key,
     required this.eachClass,
+    required this.time,
   });
 
   @override
@@ -15,7 +19,7 @@ class ClassContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5.0),
       child: Container(
-        height: MediaQuery.of(context).size.height * .25,
+        height: MediaQuery.of(context).size.height * .3,
         width: MediaQuery.of(context).size.width * .6,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -25,12 +29,45 @@ class ClassContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * .15,
+              height: MediaQuery.of(context).size.height * .2,
               width: MediaQuery.of(context).size.width * .6,
               decoration: BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover, image: NetworkImage(network_img_url)),
                 borderRadius: BorderRadius.circular(15),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Container(
+                    height: 23,
+                    width: 55,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: sColor,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.circle,
+                          size: 10,
+                          color: Colors.red,
+                        ),
+                        SizedBox(
+                          width: 3,
+                        ),
+                        Text(
+                          "Live",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
             Padding(
@@ -39,7 +76,7 @@ class ClassContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Biology",
+                    eachClass,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                     ),
@@ -61,7 +98,7 @@ class ClassContainer extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        "1:00h",
+                        time,
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                         ),
