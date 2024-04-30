@@ -5,6 +5,7 @@ import 'package:students_e_learning/src/features/bottom_navigation/chat/chat_pag
 import 'package:students_e_learning/src/features/bottom_navigation/home/home_dashboard.dart';
 import 'package:students_e_learning/src/features/login/view/login_screen.dart';
 import 'package:students_e_learning/src/features/login/view/splash_screen.dart';
+import 'package:students_e_learning/src/features/my_courses/courses.dart';
 import 'package:students_e_learning/src/features/select_subject/view/select_class.dart';
 
 void main() {
