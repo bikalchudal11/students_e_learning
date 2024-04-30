@@ -29,8 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.6
-  firebase_auth: ^4.17.9
-  firebase_core: ^2.30.1
+ 
   flutter:
     sdk: flutter
   wtf_sliding_sheet: ^1.1.3
