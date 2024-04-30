@@ -12,7 +12,7 @@ class PremiumCourseContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 5.0),
       child: Container(
-        height: 100,
+        height: 120,
         width: MediaQuery.of(context).size.width * 0.7,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -77,7 +77,7 @@ class PremiumCourseContainer extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: 100,
+                        width: 85,
                       ),
                       Text(
                         "\$45.00",

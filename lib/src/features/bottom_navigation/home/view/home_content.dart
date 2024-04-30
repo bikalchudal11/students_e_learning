@@ -12,6 +12,7 @@ import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/class_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/live_courses_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/premium_courses_container.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/test_paper/select_subject_test.dart';
 
 class HomeContent extends StatelessWidget {
   const HomeContent({super.key});
@@ -105,18 +106,24 @@ class HomeContent extends StatelessWidget {
                           Row(
                             children: [
                               HomepageTimerContainer(
+                                textColor: Colors.black,
+                                containerColor: Colors.white,
                                 num: 00,
                               ),
                               SizedBox(
                                 width: 1,
                               ),
                               HomepageTimerContainer(
+                                textColor: Colors.black,
+                                containerColor: Colors.white,
                                 num: 10,
                               ),
                               SizedBox(
                                 width: 1,
                               ),
                               HomepageTimerContainer(
+                                textColor: Colors.black,
+                                containerColor: Colors.white,
                                 num: 30,
                               ),
                               SizedBox(
@@ -177,6 +184,12 @@ class HomeContent extends StatelessWidget {
 
               //Test Exam paper
               ListTile(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SelectSubjectTest()));
+                },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusDirectional.circular(15),
                 ),

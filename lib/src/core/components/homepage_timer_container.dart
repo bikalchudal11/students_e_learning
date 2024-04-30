@@ -1,8 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomepageTimerContainer extends StatelessWidget {
+  Color textColor;
+  Color containerColor;
   int num;
-  HomepageTimerContainer({super.key, required this.num});
+  HomepageTimerContainer({
+    super.key,
+    required this.num,
+    required this.textColor,
+    required this.containerColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -10,15 +18,13 @@ class HomepageTimerContainer extends StatelessWidget {
       height: 40,
       width: 40,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: containerColor,
         borderRadius: BorderRadius.circular(4),
       ),
       child: Center(
         child: Text(
           num.toString(),
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold, color: textColor),
         ),
       ),
     );

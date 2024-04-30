@@ -5,21 +5,32 @@ import 'package:flutter/widgets.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/home_dashboard.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/test_paper/test_level.dart';
 
-class SelectSubject extends StatefulWidget {
-  const SelectSubject({super.key});
+class SelectSubjectTest extends StatefulWidget {
+  const SelectSubjectTest({super.key});
 
   @override
-  State<SelectSubject> createState() => _SelectSubjectState();
+  State<SelectSubjectTest> createState() => _SelectSubjectTestState();
 }
 
 List<String> subjectList = ['Chemistry', 'Biology', 'Physics', 'Math'];
 
-class _SelectSubjectState extends State<SelectSubject> {
+class _SelectSubjectTestState extends State<SelectSubjectTest> {
   String currentSubject = subjectList.first;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Select your Subject",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 25.0,
@@ -27,30 +38,6 @@ class _SelectSubjectState extends State<SelectSubject> {
         ),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: 6,
-                  width: MediaQuery.of(context).size.width * .8,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
-                Text("Skip"),
-              ],
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              "Select your Subject",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
             SizedBox(
               height: 20,
             ),
@@ -104,29 +91,13 @@ class _SelectSubjectState extends State<SelectSubject> {
                     );
                   }),
             ),
-            Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(pColor),
-                      foregroundColor: MaterialStatePropertyAll(
-                        Colors.white,
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text("Go Back"))),
-            SizedBox(
-              height: 40,
-            ),
             InkWell(
                 onTap: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => HomeDashBoard()));
+                      MaterialPageRoute(builder: (context) => TestLevel()));
                   // print(currentSubject);
                 },
-                child: CustomButton(buttonName: "Let's Go"))
+                child: CustomButton(buttonName: "Next"))
           ],
         ),
       ),
