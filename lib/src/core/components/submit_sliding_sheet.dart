@@ -2,7 +2,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/test_paper/test_report.dart';
 
 class SubmitSlidingSheet extends StatelessWidget {
   const SubmitSlidingSheet({super.key});
@@ -54,7 +56,12 @@ class SubmitSlidingSheet extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CustomButton(buttonName: "Yes")
+            GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => TestReport()));
+                },
+                child: CustomButton(buttonName: "Yes"))
           ],
         ),
       ),
