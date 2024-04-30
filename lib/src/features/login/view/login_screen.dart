@@ -163,8 +163,9 @@ class _LogInScreenState extends State<LogInScreen> {
             ),
             InkWell(
                 onTap: () {
-                  login();
-                  // Navigator.pushReplacementNamed(context, '/home');
+                  // login();
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SelectClass()));
                 },
                 child: CustomButton(
                   buttonName: "LOGIN",
