@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last, avoid_unnecessary_containers
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +18,9 @@ class TestReport extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+      ),
+      body: Column(
+        children: [],
       ),
     );
   }
