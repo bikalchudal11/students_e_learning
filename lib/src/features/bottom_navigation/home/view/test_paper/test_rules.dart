@@ -147,7 +147,7 @@ class TestRules extends StatelessWidget {
             ),
             InkWell(
                 onTap: () {
-                  Navigator.push(context,
+                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => TestProcess()));
                 },
                 child: CustomButton(buttonName: "I understood"))

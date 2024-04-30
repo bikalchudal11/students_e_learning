@@ -22,6 +22,7 @@ class HomeContent extends StatelessWidget {
     return Scaffold(
       backgroundColor: scaffoldBgColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: scaffoldBgColor,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
