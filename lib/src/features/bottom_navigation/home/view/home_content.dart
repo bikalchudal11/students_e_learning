@@ -8,10 +8,13 @@ import 'package:flutter/widgets.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/components/home_appbar_icon.dart';
 import 'package:students_e_learning/src/core/components/homepage_timer_container.dart';
+import 'package:students_e_learning/src/core/components/premium_courses_teacher_container.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/class_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/live_courses_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/premium_courses_container.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/p_details.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/premium_courses_list_details.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/test_paper/select_subject_test.dart';
 
 class HomeContent extends StatelessWidget {
@@ -246,9 +249,18 @@ class HomeContent extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Text(
-                    "See all",
-                    style: TextStyle(color: sColor),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  PremiumCoursesListDetails()));
+                    },
+                    child: Text(
+                      "See all",
+                      style: TextStyle(color: sColor),
+                    ),
                   ),
                 ],
               ),
@@ -259,8 +271,22 @@ class HomeContent extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    PremiumCourseContainer(),
-                    PremiumCourseContainer(),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => PDetails()));
+                        },
+                        child: PremiumCourseContainer()),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => PDetails()));
+                        },
+                        child: PremiumCourseContainer()),
                   ],
                 ),
               ),

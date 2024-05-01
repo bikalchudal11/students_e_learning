@@ -21,7 +21,7 @@ class TestReport extends StatelessWidget {
         leading: InkWell(
             onTap: () {
               Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => HomeContent()));
+                  MaterialPageRoute(builder: (context) => HomeDashBoard()));
             },
             child: Icon(Icons.arrow_back)),
         title: Text(

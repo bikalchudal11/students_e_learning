@@ -3,3 +3,5 @@ String network_img_url =
 
 String book_img_url =
     'https://img.freepik.com/free-vector/textbooks-book-day_24911-115208.jpg?t=st=1714438109~exp=1714441709~hmac=ccb51f69d981718649407c55bacfc09a8885d49d6c8133295f87e6c028feada0&w=826';
+String network_img_url2 =
+    "https://i.pinimg.com/236x/69/69/ee/6969ee7e9741a17a4a975bcff5973b03.jpg";
