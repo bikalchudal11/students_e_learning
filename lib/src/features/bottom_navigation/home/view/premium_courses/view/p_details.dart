@@ -5,6 +5,7 @@ import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/components/premium_courses_teacher_container.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/core/constants/img_const.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/payment/course_payment.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/review_view.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/detail_view.dart';
 
@@ -94,7 +95,7 @@ class _PDetailsState extends State<PDetails> {
                                 InkWell(
                                   onTap: () {
                                     setState(() {
-                                      isDetailOn = !isDetailOn;
+                                      isDetailOn = true;
                                       isReviewOn = false;
                                     });
                                   },
@@ -109,7 +110,7 @@ class _PDetailsState extends State<PDetails> {
                                   onTap: () {
                                     setState(() {
                                       isDetailOn = false;
-                                      isReviewOn = !isReviewOn;
+                                      isReviewOn = true;
                                     });
                                   },
                                   child: CourseSwitchContainer(
@@ -135,8 +136,14 @@ class _PDetailsState extends State<PDetails> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: CustomButton(
-                buttonName: "Buy Now",
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CoursePayment()));
+                },
+                child: CustomButton(
+                  buttonName: "Buy Now",
+                ),
               ),
             ),
           ],
