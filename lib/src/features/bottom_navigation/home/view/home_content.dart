@@ -10,6 +10,7 @@ import 'package:students_e_learning/src/core/components/home_appbar_icon.dart';
 import 'package:students_e_learning/src/core/components/homepage_timer_container.dart';
 import 'package:students_e_learning/src/core/components/premium_courses_teacher_container.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
+import 'package:students_e_learning/src/core/constants/img_const.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/class_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/live_courses_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/premium_courses_container.dart';
@@ -69,10 +70,18 @@ class HomeContent extends StatelessWidget {
           SizedBox(
             width: 20,
           ),
-          HomeAppbarIcon(
-            iconName: Icon(
-              Icons.person,
-              size: 28,
+          InkWell(
+            onTap: () {},
+            child: Container(
+              height: 45,
+              width: 45,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(network_img_url2),
+                ),
+                borderRadius: BorderRadius.circular(15),
+              ),
             ),
           ),
           SizedBox(

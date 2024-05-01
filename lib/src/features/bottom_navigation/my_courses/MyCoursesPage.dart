@@ -1,23 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:students_e_learning/src/features/my_courses/course_container.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/my_courses/course_container.dart';
 
-class CircularProgressBar extends StatelessWidget {
-  const CircularProgressBar({
+class MyCoursesPage extends StatelessWidget {
+  const MyCoursesPage({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   title: Padding(
-        //     padding: const EdgeInsets.symmetric(vertical: 12),
-        //     child: Text(
-        //       "My Courses",
-        //       style: TextStyle(fontWeight: FontWeight.w600),
-        //     ),
-        //   ),
-        // ),
         body: Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
