@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/features/my_courses/course_container.dart';
 
-class CircularProgressBar extends StatelessWidget {
-  final double percentage;
-
-  const CircularProgressBar({Key? key, required this.percentage})
-      : super(key: key);
+class Course extends StatelessWidget {
+  const Course({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
