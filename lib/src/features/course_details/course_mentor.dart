@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:students_e_learning/src/core/constants/img_const.dart';
 import 'package:students_e_learning/src/features/course_details/subject_component.dart';
 
 class SlideCourseMentor extends StatelessWidget {
@@ -11,8 +12,7 @@ class SlideCourseMentor extends StatelessWidget {
       children: [
         SizedBox(height: 15),
         SubjectsComponent(
-          imageUrl:
-              'https://th.bing.com/th/id/OIP.O05xk7vM4Pw1AxTLFwmwzgHaGS?w=1160&h=984&rs=1&pid=ImgDetMain',
+          imageUrl: network_img_url,
           titleText: 'David Harry',
           subtitleText: 'Maths',
         ),

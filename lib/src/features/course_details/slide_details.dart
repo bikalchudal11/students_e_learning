@@ -1,22 +1,19 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+import 'package:students_e_learning/src/core/constants/colors.dart';
 
 class SlideCourseDetails extends StatelessWidget {
   const SlideCourseDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Color grey = Color.fromARGB(255, 150, 147, 147);
-
     return Column(
       children: [
-        SizedBox(height: 13),
+        SizedBox(height: 20),
         RichText(
           text: TextSpan(
-            style: TextStyle(
-              fontSize: 14, // Adjust the font size as needed
-              color: Color.fromARGB(
-                  255, 87, 85, 85), // Adjust the text color as needed
-            ),
+            style: TextStyle(color: Colors.black),
             children: [
               TextSpan(
                 text:
@@ -26,7 +23,7 @@ class SlideCourseDetails extends StatelessWidget {
                 text: "See more",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  color: Colors.blue,
+                  color: pColor,
                 ),
               ),
             ],
@@ -39,12 +36,10 @@ class SlideCourseDetails extends StatelessWidget {
           children: [
             Icon(
               Icons.remove_red_eye_outlined,
-              color: grey,
-              size: 18,
+              size: 22,
             ),
             Text(
               "   338 live classes",
-              style: TextStyle(fontSize: 12, color: grey),
             )
           ],
         ),
@@ -55,12 +50,10 @@ class SlideCourseDetails extends StatelessWidget {
           children: [
             Icon(
               Icons.timer_outlined,
-              color: grey,
-              size: 18,
+              size: 22,
             ),
             Text(
               "   1 hour per class",
-              style: TextStyle(fontSize: 12, color: grey),
             )
           ],
         ),
@@ -71,12 +64,10 @@ class SlideCourseDetails extends StatelessWidget {
           children: [
             Icon(
               Icons.person_outline_rounded,
-              color: grey,
-              size: 18,
+              size: 22,
             ),
             Text(
               "   Expert Mentors",
-              style: TextStyle(fontSize: 12, color: grey),
             )
           ],
         ),
@@ -87,12 +78,10 @@ class SlideCourseDetails extends StatelessWidget {
           children: [
             Icon(
               Icons.question_mark_rounded,
-              color: grey,
-              size: 18,
+              size: 22,
             ),
             Text(
               "   Tests & pratices",
-              style: TextStyle(fontSize: 12, color: grey),
             ),
           ],
         ),
