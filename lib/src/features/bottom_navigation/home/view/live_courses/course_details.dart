@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/core/constants/img_const.dart';
-import 'package:students_e_learning/src/features/course_details/course_mentor.dart';
-import 'package:students_e_learning/src/features/course_details/course_subject.dart';
-import 'package:students_e_learning/src/features/course_details/slide_details.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/course_mentor.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/course_subject.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/slide_details.dart';
 
 class CourseDetails extends StatefulWidget {
   const CourseDetails({super.key});

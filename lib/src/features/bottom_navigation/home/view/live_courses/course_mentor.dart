@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/core/constants/img_const.dart';
-import 'package:students_e_learning/src/features/course_details/subject_component.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/subject_component.dart';
 
 class SlideCourseMentor extends StatelessWidget {
   const SlideCourseMentor({super.key});

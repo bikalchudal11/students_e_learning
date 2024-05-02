@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_e_learning/src/features/course_details/subject_component.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/subject_component.dart';
 
 class SlideCourseSubject extends StatelessWidget {
   const SlideCourseSubject({super.key});

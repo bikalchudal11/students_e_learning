@@ -15,9 +15,11 @@ import 'package:students_e_learning/src/features/bottom_navigation/home/componen
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/live_courses_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/premium_courses_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/drawer/drawer_content.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/live_courses_list.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/p_details.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/premium_courses_list_details.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/test_paper/select_subject_test.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/course_details.dart';
 
 class HomeContent extends StatelessWidget {
   const HomeContent({super.key});
@@ -323,9 +325,17 @@ class HomeContent extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Text(
-                    "See all",
-                    style: TextStyle(color: sColor),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LiveCoursesListDetails()));
+                    },
+                    child: Text(
+                      "See all",
+                      style: TextStyle(color: sColor),
+                    ),
                   ),
                 ],
               ),
@@ -336,9 +346,30 @@ class HomeContent extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    LiveCoursesContainer(),
-                    LiveCoursesContainer(),
-                    LiveCoursesContainer(),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CourseDetails()));
+                        },
+                        child: LiveCoursesContainer()),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CourseDetails()));
+                        },
+                        child: LiveCoursesContainer()),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CourseDetails()));
+                        },
+                        child: LiveCoursesContainer()),
                   ],
                 ),
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_e_learning/src/features/my_courses/course_container.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/my_courses/course_container.dart';
 
 class Course extends StatelessWidget {
   const Course({Key? key}) : super(key: key);
