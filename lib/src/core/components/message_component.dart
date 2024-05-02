@@ -49,7 +49,6 @@ class MessageComponent extends StatelessWidget {
                   child: Text(
                     textMsg,
                     style: TextStyle(
-                      fontSize: 13,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

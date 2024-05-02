@@ -23,7 +23,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
+<<<<<<< HEAD
       home: CourseDetails(),
+=======
+      home: HomeDashBoard(),
+>>>>>>> main
     );
   }
 }

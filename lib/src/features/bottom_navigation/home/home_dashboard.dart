@@ -6,7 +6,7 @@ import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/calender/calender.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/chat/chat_page.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/home_content.dart';
-import 'package:students_e_learning/src/features/bottom_navigation/play/play.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/my_courses/MyCoursesPage.dart';
 
 class HomeDashBoard extends StatefulWidget {
   const HomeDashBoard({super.key});
@@ -28,7 +28,7 @@ class _HomeDashBoardState extends State<HomeDashBoard> {
     return Scaffold(
       body: [
         HomeContent(),
-        PlayPage(),
+        MyCoursesPage(),
         CalenderPage(),
         ChatPage(),
       ][_selectedIndex],
@@ -43,7 +43,7 @@ class _HomeDashBoardState extends State<HomeDashBoard> {
             icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
-            label: "Play",
+            label: "My Courses",
             icon: Icon(
               Icons.play_circle,
             ),

@@ -13,6 +13,7 @@ class ChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         elevation: 2,
         title: ListTile(
           contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
@@ -72,9 +73,6 @@ class ChatPage extends StatelessWidget {
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                     borderSide: BorderSide.none),
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 1,
-                ),
                 prefixIcon: Icon(
                   Icons.add_circle_rounded,
                   size: 30,

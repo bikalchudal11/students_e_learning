@@ -93,7 +93,7 @@ class _TestLevelState extends State<TestLevel> {
             ),
             InkWell(
                 onTap: () {
-                  Navigator.push(context,
+                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => TestRules()));
                 },
                 child: Padding(

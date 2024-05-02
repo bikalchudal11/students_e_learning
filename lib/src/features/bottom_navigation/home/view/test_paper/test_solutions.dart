@@ -75,12 +75,7 @@ class QuestionAnswer extends StatelessWidget {
                     fontSize: 15,
                   ),
                 ),
-                ansShow
-                    ? SizedBox()
-                    : Icon(
-                        Icons.check_circle,
-                        color: Colors.green,
-                      ),
+                ansShow ? SizedBox() : statusDisplay(index),
               ],
             ),
             SizedBox(
@@ -132,5 +127,19 @@ class QuestionAnswer extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  statusDisplay(int index) {
+    if (index % 2 == 0) {
+      return Icon(
+        Icons.check_circle,
+        color: Colors.green,
+      );
+    } else {
+      return Icon(
+        Icons.close,
+        color: Colors.red,
+      );
+    }
   }
 }
