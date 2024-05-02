@@ -81,7 +81,7 @@ class SlideCourseDetails extends StatelessWidget {
               size: 22,
             ),
             Text(
-              "   Tests & pratices",
+              "   Tests & practices",
             ),
           ],
         ),
