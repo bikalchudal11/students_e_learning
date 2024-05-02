@@ -104,7 +104,7 @@ class _CourseDetailsState extends State<CourseDetails> {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: NetworkImage(network_img_url),
+                          image: NetworkImage(network_img_url2),
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
