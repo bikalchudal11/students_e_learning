@@ -14,6 +14,7 @@ import 'package:students_e_learning/src/core/constants/img_const.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/class_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/live_courses_container.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/premium_courses_container.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/home/view/drawer/drawer_content.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/p_details.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/premium_courses/view/premium_courses_list_details.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/view/test_paper/select_subject_test.dart';
@@ -26,7 +27,7 @@ class HomeContent extends StatelessWidget {
     return Scaffold(
       backgroundColor: scaffoldBgColor,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        // automaticallyImplyLeading: false,
         backgroundColor: scaffoldBgColor,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,24 +71,24 @@ class HomeContent extends StatelessWidget {
           SizedBox(
             width: 20,
           ),
-          InkWell(
-            onTap: () {},
-            child: Container(
-              height: 45,
-              width: 45,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(network_img_url2),
-                ),
-                borderRadius: BorderRadius.circular(15),
+          Container(
+            height: 45,
+            width: 45,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(network_img_url2),
               ),
+              borderRadius: BorderRadius.circular(15),
             ),
           ),
           SizedBox(
             width: 10,
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: DrawerContent(),
       ),
       body: SingleChildScrollView(
         child: Padding(
