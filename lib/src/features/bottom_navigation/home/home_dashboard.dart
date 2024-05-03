@@ -29,7 +29,7 @@ class _HomeDashBoardState extends State<HomeDashBoard> {
       body: [
         HomeContent(),
         PlayPage(),
-        CalenderPage(),
+        // CalenderPage(),
         ChatPage(),
       ][_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(

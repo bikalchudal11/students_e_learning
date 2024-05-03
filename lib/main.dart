@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:students_e_learning/src/features/bottom_navigation/calender/calender.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/chat/chat_page.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/home_dashboard.dart';
 import 'package:students_e_learning/src/features/course_details/course_details.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: CourseDetails(),
+      home: CalenderPage(),
     );
   }
 }
