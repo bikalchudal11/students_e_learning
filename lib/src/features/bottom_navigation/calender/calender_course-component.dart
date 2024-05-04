@@ -70,7 +70,7 @@ class CalenderComponent extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(width: 40),
+          SizedBox(width: 15),
           Icon(
             Icons.chevron_right_rounded,
             color: Colors.grey,
