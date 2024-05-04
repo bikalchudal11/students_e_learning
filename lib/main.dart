@@ -10,6 +10,7 @@ import 'package:students_e_learning/src/features/login/view/login_screen.dart';
 import 'package:students_e_learning/src/features/login/view/splash_screen.dart';
 import 'package:students_e_learning/src/features/my_courses/course_container.dart';
 import 'package:students_e_learning/src/features/my_courses/courses.dart';
+import 'package:students_e_learning/src/features/price_breakdown/price_breakdown.dart';
 import 'package:students_e_learning/src/features/select_subject/view/select_class.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: CalenderPage(),
+      home: PriceBreakdown(),
     );
   }
 }
