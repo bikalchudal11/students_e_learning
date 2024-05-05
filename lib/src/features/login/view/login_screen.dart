@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, use_build_context_synchronously
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
@@ -20,48 +21,48 @@ class _LogInScreenState extends State<LogInScreen> {
   TextEditingController passWordController = TextEditingController();
   bool _obsecureText = true;
   bool isLogin = false;
-  // login() async {
-  //   String email = emailController.text.trim();
-  //   String passWord = passWordController.text.trim();
+  login() async {
+    String email = emailController.text.trim();
+    String passWord = passWordController.text.trim();
 
-  //   if (email == "" || passWord == "") {
-  //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //         backgroundColor: Colors.red,
-  //         content: Text(
-  //           "Please fill all the fields!",
-  //           style: TextStyle(
-  //             color: Colors.white,
-  //           ),
-  //         )));
-  //   } else {
-  //     try {
-  //       setState(() {
-  //         isLogin = true;
-  //       });
-  //       UserCredential userCredential = await FirebaseAuth.instance
-  //           .signInWithEmailAndPassword(email: email, password: passWord);
+    if (email == "" || passWord == "") {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            "Please fill all the fields!",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          )));
+    } else {
+      try {
+        setState(() {
+          isLogin = true;
+        });
+        UserCredential userCredential = await FirebaseAuth.instance
+            .signInWithEmailAndPassword(email: email, password: passWord);
 
-  //       // ignore: unnecessary_null_comparison
-  //       if (userCredential != null) {
-  //         Navigator.pushReplacement(
-  //             context, MaterialPageRoute(builder: (context) => SelectClass()));
-  //       }
-  //     } on FirebaseAuthException catch (ex) {
-  //       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //           backgroundColor: Colors.red,
-  //           content: Text(
-  //             ex.code.toString(),
-  //             style: TextStyle(
-  //               color: Colors.white,
-  //             ),
-  //           )));
-  //       // print(ex.code.toString());
-  //       setState(() {
-  //         isLogin = false;
-  //       });
-  //     }
-  //   }
-  // }
+        // ignore: unnecessary_null_comparison
+        if (userCredential != null) {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => SelectClass()));
+        }
+      } on FirebaseAuthException catch (ex) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: Colors.red,
+            content: Text(
+              ex.code.toString(),
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            )));
+        // print(ex.code.toString());
+        setState(() {
+          isLogin = false;
+        });
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -162,9 +163,7 @@ class _LogInScreenState extends State<LogInScreen> {
             ),
             InkWell(
                 onTap: () {
-                  // login();
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => SelectClass()));
+                  login();
                 },
                 child: CustomButton(
                   buttonName: "LOGIN",

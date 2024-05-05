@@ -1,14 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/components/home_appbar_icon.dart';
 import 'package:students_e_learning/src/core/components/homepage_timer_container.dart';
-import 'package:students_e_learning/src/core/components/premium_courses_teacher_container.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
 import 'package:students_e_learning/src/core/constants/img_const.dart';
 import 'package:students_e_learning/src/features/bottom_navigation/home/components/class_container.dart';

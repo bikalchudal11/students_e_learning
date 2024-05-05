@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, use_build_context_synchronously, unnecessary_null_comparison
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:students_e_learning/src/core/components/custom_button.dart';
 import 'package:students_e_learning/src/core/constants/colors.dart';
@@ -21,56 +22,55 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
   TextEditingController cPassWordController = TextEditingController();
   bool _obsecureText = true;
 
-  // void saveUser() async {
-  //   String nameS = userNameController.text.trim();
-  //   String emailS = emailController.text.trim();
-  //   String phoneS = phoneController.text.trim();
-  //   String passWordS = passWordController.text.trim();
-  //   String cPassWordS = cPassWordController.text.trim();
+  void saveUser() async {
+    String nameS = userNameController.text.trim();
+    String emailS = emailController.text.trim();
+    String phoneS = phoneController.text.trim();
+    String passWordS = passWordController.text.trim();
+    String cPassWordS = cPassWordController.text.trim();
 
-  //   if (nameS == "" ||
-  //       emailS == "" ||
-  //       phoneS == "" ||
-  //       passWordS == "" ||
-  //       cPassWordS == "") {
-  //     print("please fill all the fields");
-  //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //       backgroundColor: Colors.red,
-  //       content: Text(
-  //         "Please fill all the fields!",
-  //         style: TextStyle(color: Colors.white),
-  //       ),
-  //     ));
-  //   } else if (passWordS != cPassWordS) {
-  //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //       backgroundColor: Colors.red,
-  //       content: Text(
-  //         "Password don't match!",
-  //         style: TextStyle(color: Colors.white),
-  //       ),
-  //     ));
-  //   } else {
-  //     try {
-  //       setState(() {
-  //         isSaved = true;
-  //       });
-  //       UserCredential userCredential = await FirebaseAuth.instance
-  //           .createUserWithEmailAndPassword(email: emailS, password: passWordS);
+    if (nameS == "" ||
+        emailS == "" ||
+        phoneS == "" ||
+        passWordS == "" ||
+        cPassWordS == "") {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        backgroundColor: Colors.red,
+        content: Text(
+          "Please fill all the fields!",
+          style: TextStyle(color: Colors.white),
+        ),
+      ));
+    } else if (passWordS != cPassWordS) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        backgroundColor: Colors.red,
+        content: Text(
+          "Password don't match!",
+          style: TextStyle(color: Colors.white),
+        ),
+      ));
+    } else {
+      try {
+        setState(() {
+          isSaved = true;
+        });
+        UserCredential userCredential = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: emailS, password: passWordS);
 
-  //       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //           backgroundColor: Colors.green,
-  //           content: Text(
-  //             "Account Created!",
-  //             style: TextStyle(color: Colors.white),
-  //           )));
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: Colors.green,
+            content: Text(
+              "Account Created!",
+              style: TextStyle(color: Colors.white),
+            )));
 
-  //       if (userCredential != null) {
-  //         Navigator.pushReplacement(
-  //             context, MaterialPageRoute(builder: (context) => LogInScreen()));
-  //       }
-  //     } on FirebaseAuthException catch (ex) {}
-  //   }
-  // }
+        if (userCredential != null) {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => LogInScreen()));
+        }
+      } on FirebaseAuthException catch (ex) {}
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -246,7 +246,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // saveUser();
+                    saveUser();
                   },
                   child: Column(
                     children: [

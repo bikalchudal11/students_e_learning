@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "952565689778",
-    "project_id": "e-learning-students",
-    "storage_bucket": "e-learning-students.appspot.com"
+    "project_number": "578325165964",
+    "project_id": "e-learning-12471",
+    "storage_bucket": "e-learning-12471.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:952565689778:android:eb88cbb7d3540383d588ab",
+        "mobilesdk_app_id": "1:578325165964:android:ae80ec0f827404b59208a9",
         "android_client_info": {
           "package_name": "com.example.students_e_learning"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDYaedyM3Vu6K7MmcYa50bPzGwjsPrLq7k"
+          "current_key": "AIzaSyD3ATj9v0Tc0yYC3yYAy4ANAQNadBu9U0M"
         }
       ],
       "services": {

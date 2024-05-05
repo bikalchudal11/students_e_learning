@@ -1,16 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:students_e_learning/src/features/bottom_navigation/chat/chat_page.dart';
-import 'package:students_e_learning/src/features/bottom_navigation/home/home_dashboard.dart';
-import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/course_details.dart';
-import 'package:students_e_learning/src/features/bottom_navigation/home/view/live_courses/course_subject.dart';
-import 'package:students_e_learning/src/features/login/view/login_screen.dart';
+import 'package:students_e_learning/firebase_options.dart';
 import 'package:students_e_learning/src/features/login/view/splash_screen.dart';
-import 'package:students_e_learning/src/features/my_courses/courses.dart';
-import 'package:students_e_learning/src/features/select_subject/view/select_class.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: HomeDashBoard(),
+      home: SplashScreen(),
     );
   }
 }
