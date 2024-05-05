@@ -1,0 +1,24 @@
+newMethod(
+              'https://th.bing.com/th/id/OIP.UYagQDMo7CCbBLXOPB5etAHaHa?rs=1&pid=ImgDetMain',
+              'Samir Adhakari',
+              'k xa',
+              '9 min',
+            ),
+            newMethod(
+              'https://th.bing.com/th/id/OIP.484tbx2IMS2nF0WJk8EnlQAAAA?w=470&h=626&rs=1&pid=ImgDetMain',
+              'Bikal chudal',
+              'Where are you',
+              '15 min',
+            ),
+            newMethod(
+              'https://img.freepik.com/premium-photo/pixar-style-3d-animation-boy-glasses-cap_899449-20919.jpg',
+              'Justine Miral',
+              'Hey there ,whatsup',
+              '20 min',
+            ),
+            newMethod(
+              'https://th.bing.com/th/id/OIP.eKfT2PY0iBhrcLZQP-F-YwAAAA?rs=1&pid=ImgDetMain',
+              'Sumit Dhamala',
+              'How are you bro',
+              '30 min',
+            ),
